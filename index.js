@@ -1,16 +1,16 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const authRouter = require("./routes/auth");
-const cors = require("cors");
-const PORT = process.env.PORT || 3000;
+// const cors = require("cors");
+const PORT = process.env.PORT || 4000;
 const app = express();
-const allowedOrigins = [
-  "http://localhost:40494", // Replace with the origin of your frontend application
-  // Add more origins as needed
-];
+// const allowedOrigins = [
+//   "http://localhost:40494", // Replace with the origin of your frontend application
+//   // Add more origins as needed
+// ];
 
 // Use the cors middleware to enable Cross-Origin Resource Sharing
-app.use(cors(allowedOrigins));
+// app.use(cors(allowedOrigins));
 
 app.use(express.json());
 app.use(authRouter);
